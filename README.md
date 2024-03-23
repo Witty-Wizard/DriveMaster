@@ -1,5 +1,6 @@
 ![GitHub Release](https://img.shields.io/github/v/release/Witty-Wizard/DriveMaster)
 [![Doxygen](https://github.com/adafruit/ci-arduino/blob/master/assets/doxygen_badge.svg)](https://witty-wizard.github.io/DriveMaster/)
+[![Doxygen CI](https://github.com/Witty-Wizard/DriveMaster/actions/workflows/main.yaml/badge.svg)](https://github.com/Witty-Wizard/DriveMaster/actions/workflows/main.yaml)
 ![GitHub License](https://img.shields.io/github/license/Witty-Wizard/DriveMaster)
 
 # DriveMaster Library
