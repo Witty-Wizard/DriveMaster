@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['_7edrivemaster_0',['~DriveMaster',['../classDriveMaster.html#ad3cdd8c68c3e44c002dc133811ab1136',1,'DriveMaster']]],
-  ['_7edshot_1',['~dshot',['../classdshot.html#a2c1f432e10ce8fb8f0ac838788ab87cf',1,'dshot']]]
+  ['write_0',['write',['../classDriveMaster.html#a53809e84ec9a4a08282431f6b4bae69b',1,'DriveMaster']]]
 ];

@@ -26,23 +26,22 @@ var NAVTREE =
 [
   [ "DriveMaster", "index.html", [
     [ "Supported Protocol", "index.html#autotoc_md0", [
-      [ "DShot300", "index.html#dshot300", [
-        [ "Configuration", "index.html#autotoc_md1", null ]
-      ] ],
-      [ "DShot600", "index.html#dshot600", [
-        [ "Configuration", "index.html#autotoc_md2", null ]
+      [ "DShot", "index.html#dshot", [
+        [ "Frame Structure", "index.html#autotoc_md1", null ],
+        [ "DShot Versions and Bitrates", "index.html#autotoc_md2", null ]
       ] ]
     ] ],
-    [ "Getting Started", "index.html#autotoc_md3", null ],
-    [ "Installation", "index.html#installation", [
-      [ "Arduino Installation", "index.html#autotoc_md4", null ],
-      [ "PlatformIO Installation", "index.html#autotoc_md5", null ]
-    ] ],
-    [ "Tutorial", "index.html#tutorial", [
-      [ "Using DriveMaster Library for Motor Control", "index.html#autotoc_md6", null ]
-    ] ],
-    [ "Examples", "index.html#example", [
-      [ "DShot Example", "index.html#autotoc_md7", null ]
+    [ "Getting Started", "index.html#autotoc_md3", [
+      [ "Installation", "index.html#installation", [
+        [ "Arduino Installation", "index.html#autotoc_md4", null ],
+        [ "PlatformIO Installation", "index.html#autotoc_md5", null ]
+      ] ],
+      [ "Tutorial", "index.html#tutorial", [
+        [ "Using DriveMaster Library for Motor Control", "index.html#autotoc_md6", null ]
+      ] ],
+      [ "Examples", "index.html#example", [
+        [ "DShot Example", "index.html#autotoc_md7", null ]
+      ] ]
     ] ],
     [ "License", "index.html#autotoc_md8", null ],
     [ "Classes", "annotated.html", [

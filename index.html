@@ -99,31 +99,33 @@ $(function(){initNavTree('index.html',''); initResizable(); });
 <h1><a class="anchor" id="autotoc_md0"></a>
 Supported Protocol</h1>
 <ul>
-<li><a class="el" href="#dshot300">DShot300</a></li>
-<li><a class="el" href="#dshot600">DShot600</a></li>
+<li><a class="el" href="#dshot">DShot</a></li>
 </ul>
-<h2><a class="anchor" id="dshot300"></a>
-DShot300</h2>
+<h2><a class="anchor" id="dshot"></a>
+DShot</h2>
 <h3><a class="anchor" id="autotoc_md1"></a>
-Configuration</h3>
+Frame Structure</h3>
+<p>The DShot frame consists of 16 bits and follows a specific structure:</p>
 <ul>
-<li>Baud rate: 100000</li>
-<li>Data bits: 8 Bits</li>
-<li>Parity: Even Parity</li>
-<li>Stop bits: 2 Stop bits</li>
-<li>Signal polarity: Inverted</li>
+<li><b>Throttle</b>: 11 bits representing throttle values ranging from 48 to 2047.</li>
+<li><b>Telemetry Request</b>: 1 bit indicating whether telemetry data is requested.</li>
+<li><b>CRC</b>: 4 bits for error checking using a cyclic redundancy check.</li>
 </ul>
-<h2><a class="anchor" id="dshot600"></a>
-DShot600</h2>
 <h3><a class="anchor" id="autotoc_md2"></a>
-Configuration</h3>
-<ul>
-<li>Baud rate: 420000</li>
-<li>Data bits: 8 Bits</li>
-<li>Parity: No Parity</li>
-<li>Stop bits: 1 Stop bits</li>
-<li>Signal polarity: Uninverted</li>
-</ul>
+DShot Versions and Bitrates</h3>
+<p>Different versions of DShot support varying bitrates and durations for high and low signal times:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">DShot Version   </th><th class="markdownTableHeadNone">Bitrate (bps)   </th><th class="markdownTableHeadNone">T1H (µs)   </th><th class="markdownTableHeadNone">T0H (µs)   </th><th class="markdownTableHeadNone">Bit Length (µs)   </th><th class="markdownTableHeadNone">Frame Length (µs)    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">DShot150   </td><td class="markdownTableBodyNone">150,000   </td><td class="markdownTableBodyNone">5.00   </td><td class="markdownTableBodyNone">2.50   </td><td class="markdownTableBodyNone">6.67   </td><td class="markdownTableBodyNone">106.72    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">DShot300   </td><td class="markdownTableBodyNone">300,000   </td><td class="markdownTableBodyNone">2.50   </td><td class="markdownTableBodyNone">1.25   </td><td class="markdownTableBodyNone">3.33   </td><td class="markdownTableBodyNone">53.28    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">DShot600   </td><td class="markdownTableBodyNone">600,000   </td><td class="markdownTableBodyNone">1.25   </td><td class="markdownTableBodyNone">0.625   </td><td class="markdownTableBodyNone">1.67   </td><td class="markdownTableBodyNone">26.72    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">DShot1200   </td><td class="markdownTableBodyNone">1,200,000   </td><td class="markdownTableBodyNone">0.625   </td><td class="markdownTableBodyNone">0.313   </td><td class="markdownTableBodyNone">0.83   </td><td class="markdownTableBodyNone">13.28   </td></tr>
+</table>
 <h1><a class="anchor" id="autotoc_md3"></a>
 Getting Started</h1>
 <ul>
@@ -131,10 +133,10 @@ Getting Started</h1>
 <li><a class="el" href="#tutorial">Tutorial</a></li>
 <li><a class="el" href="#example">Examples</a></li>
 </ul>
-<h1><a class="anchor" id="installation"></a>
-Installation</h1>
-<h2><a class="anchor" id="autotoc_md4"></a>
-Arduino Installation</h2>
+<h2><a class="anchor" id="installation"></a>
+Installation</h2>
+<h3><a class="anchor" id="autotoc_md4"></a>
+Arduino Installation</h3>
 <p>To use the <a class="el" href="classDriveMaster.html" title="Base class for motor control.">DriveMaster</a> library in your Arduino projects, follow these installation steps:</p>
 <ol type="1">
 <li>Download the <a class="el" href="classDriveMaster.html" title="Base class for motor control.">DriveMaster</a> library from the <a href="https://github.com/Witty-Wizard/DriveMaster">GitHub repository</a>.</li>
@@ -143,14 +145,14 @@ Arduino Installation</h2>
 <li>Restart the Arduino IDE.</li>
 <li>You should now be able to include the <a class="el" href="classDriveMaster.html" title="Base class for motor control.">DriveMaster</a> library in your Arduino sketches.</li>
 </ol>
-<h2><a class="anchor" id="autotoc_md5"></a>
-PlatformIO Installation</h2>
+<h3><a class="anchor" id="autotoc_md5"></a>
+PlatformIO Installation</h3>
 <p>If you are using PlatformIO, you can install the <a class="el" href="classDriveMaster.html" title="Base class for motor control.">DriveMaster</a> library directly from the PlatformIO Library Manager. Add the following line to your <code>platformio.ini</code> file:</p>
 <div class="fragment"><div class="line">lib_deps = Witty-Wizard/DriveMaster @ ^0.1.0</div>
-</div><!-- fragment --> <h1><a class="anchor" id="tutorial"></a>
-Tutorial</h1>
-<h2><a class="anchor" id="autotoc_md6"></a>
-Using DriveMaster Library for Motor Control</h2>
+</div><!-- fragment --> <h2><a class="anchor" id="tutorial"></a>
+Tutorial</h2>
+<h3><a class="anchor" id="autotoc_md6"></a>
+Using DriveMaster Library for Motor Control</h3>
 <p>To control motors in your Arduino project using the <a class="el" href="classDriveMaster.html" title="Base class for motor control.">DriveMaster</a> library, follow these steps:</p>
 <ol type="1">
 <li><b>Include Necessary Libraries</b></li>
@@ -179,11 +181,27 @@ Using DriveMaster Library for Motor Control</h2>
 <div class="line">motor-&gt;<a class="code hl_function" href="classDriveMaster.html#a8667c9cf196298aef9293ba3e78ff382">sendValue</a>(512);</div>
 <div class="ttc" id="aclassDriveMaster_html_a431758ea82130c30da7911b180e352d3"><div class="ttname"><a href="classDriveMaster.html#a431758ea82130c30da7911b180e352d3">DriveMaster::sendCommand</a></div><div class="ttdeci">virtual void sendCommand(uint16_t value)</div><div class="ttdoc">Send a command to the motor.</div><div class="ttdef"><b>Definition</b> DriveMaster.cpp:11</div></div>
 <div class="ttc" id="aclassDriveMaster_html_a8667c9cf196298aef9293ba3e78ff382"><div class="ttname"><a href="classDriveMaster.html#a8667c9cf196298aef9293ba3e78ff382">DriveMaster::sendValue</a></div><div class="ttdeci">virtual void sendValue(uint16_t value)</div><div class="ttdoc">Send a value to the motor.</div><div class="ttdef"><b>Definition</b> DriveMaster.cpp:12</div></div>
-</div><!-- fragment --><h1><a class="anchor" id="example"></a>
-Examples</h1>
-<h2><a class="anchor" id="autotoc_md7"></a>
-DShot Example</h2>
-<div class="fragment"></div><!-- fragment --><h1><a class="anchor" id="autotoc_md8"></a>
+</div><!-- fragment --><h2><a class="anchor" id="example"></a>
+Examples</h2>
+<h3><a class="anchor" id="autotoc_md7"></a>
+DShot Example</h3>
+<div class="fragment"><div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="DriveMaster_8h.html">DriveMaster.h</a>&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#define MOTOR_PIN 9</span></div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_class" href="classDriveMaster.html">DriveMaster</a> *motor;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> setup() {</div>
+<div class="line">  motor = <span class="keyword">new</span> <a class="code hl_class" href="classDriveMaster.html">DriveMaster</a>(MOTOR_PIN);</div>
+<div class="line">  motor-&gt;<a class="code hl_function" href="classDriveMaster.html#a888e34b3f02bb46b879cd5337da0bb6e">begin</a>();</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> loop() {</div>
+<div class="line">  motor-&gt;<a class="code hl_function" href="classDriveMaster.html#a8667c9cf196298aef9293ba3e78ff382">sendValue</a>(512);</div>
+<div class="line">  delay(1000); <span class="comment">// Delay for 1 second</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md8"></a>
 License</h1>
 <p>This library is distributed under the GNU <a href="https://www.gnu.org/licenses/gpl-3.0.html">General Public License version 3.0</a>. </p>
 </div></div><!-- PageDoc -->
