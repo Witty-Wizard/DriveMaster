@@ -13,7 +13,6 @@ void setup() {
 }
 
 void loop() {
-  // Example: Set motor speed to 50% duty cycle
   motor->sendValue(512);
   delay(1000); // Delay for 1 second
 }
