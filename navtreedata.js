@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "SerialIO", "index.html", [
+  [ "DriveMaster", "index.html", [
     [ "index", "md_Docs_2index.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
