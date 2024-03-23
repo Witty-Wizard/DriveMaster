@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>DriveMaster: Main Page</title>
+<title>DriveMaster: DriveMaster</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,10 +91,103 @@ $(function(){initNavTree('index.html',''); initResizable(); });
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">DriveMaster Documentation</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title"><a class="el" href="classDriveMaster.html" title="Base class for motor control.">DriveMaster</a> </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p><a class="el" href="classDriveMaster.html" title="Base class for motor control.">DriveMaster</a> is a common library designed to simplify the implementation of RC protocol decoding in Arduino projects. It provides a modular and extensible architecture that allows for easy integration of various RC protocols.</p>
+<h1><a class="anchor" id="autotoc_md0"></a>
+Supported Protocol</h1>
+<ul>
+<li><a class="el" href="#dshot300">DShot300</a></li>
+<li><a class="el" href="#dshot600">DShot600</a></li>
+</ul>
+<h2><a class="anchor" id="dshot300"></a>
+DShot300</h2>
+<h3><a class="anchor" id="autotoc_md1"></a>
+Configuration</h3>
+<ul>
+<li>Baud rate: 100000</li>
+<li>Data bits: 8 Bits</li>
+<li>Parity: Even Parity</li>
+<li>Stop bits: 2 Stop bits</li>
+<li>Signal polarity: Inverted</li>
+</ul>
+<h2><a class="anchor" id="dshot600"></a>
+DShot600</h2>
+<h3><a class="anchor" id="autotoc_md2"></a>
+Configuration</h3>
+<ul>
+<li>Baud rate: 420000</li>
+<li>Data bits: 8 Bits</li>
+<li>Parity: No Parity</li>
+<li>Stop bits: 1 Stop bits</li>
+<li>Signal polarity: Uninverted</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Getting Started</h1>
+<ul>
+<li><a class="el" href="#installation">Installation</a></li>
+<li><a class="el" href="#tutorial">Tutorial</a></li>
+<li><a class="el" href="#example">Examples</a></li>
+</ul>
+<h1><a class="anchor" id="installation"></a>
+Installation</h1>
+<h2><a class="anchor" id="autotoc_md4"></a>
+Arduino Installation</h2>
+<p>To use the <a class="el" href="classDriveMaster.html" title="Base class for motor control.">DriveMaster</a> library in your Arduino projects, follow these installation steps:</p>
+<ol type="1">
+<li>Download the <a class="el" href="classDriveMaster.html" title="Base class for motor control.">DriveMaster</a> library from the <a href="https://github.com/Witty-Wizard/DriveMaster">GitHub repository</a>.</li>
+<li>Extract the downloaded ZIP file.</li>
+<li>Copy the extracted folder to the <code>libraries</code> directory in your Arduino sketchbook.</li>
+<li>Restart the Arduino IDE.</li>
+<li>You should now be able to include the <a class="el" href="classDriveMaster.html" title="Base class for motor control.">DriveMaster</a> library in your Arduino sketches.</li>
+</ol>
+<h2><a class="anchor" id="autotoc_md5"></a>
+PlatformIO Installation</h2>
+<p>If you are using PlatformIO, you can install the <a class="el" href="classDriveMaster.html" title="Base class for motor control.">DriveMaster</a> library directly from the PlatformIO Library Manager. Add the following line to your <code>platformio.ini</code> file:</p>
+<div class="fragment"><div class="line">lib_deps = Witty-Wizard/DriveMaster @ ^0.1.0</div>
+</div><!-- fragment --> <h1><a class="anchor" id="tutorial"></a>
+Tutorial</h1>
+<h2><a class="anchor" id="autotoc_md6"></a>
+Using DriveMaster Library for Motor Control</h2>
+<p>To control motors in your Arduino project using the <a class="el" href="classDriveMaster.html" title="Base class for motor control.">DriveMaster</a> library, follow these steps:</p>
+<ol type="1">
+<li><b>Include Necessary Libraries</b></li>
+</ol>
+<p>Include the required library at the beginning of your sketch: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="DriveMaster_8h.html">DriveMaster.h</a>&gt;</span></div>
+<div class="ttc" id="aDriveMaster_8h_html"><div class="ttname"><a href="DriveMaster_8h.html">DriveMaster.h</a></div><div class="ttdoc">Header file for the DriveMaster class.</div></div>
+</div><!-- fragment --><ol type="1">
+<li><b>Instantiate <a class="el" href="classDriveMaster.html" title="Base class for motor control.">DriveMaster</a> Object</b> Create an instance of the <a class="el" href="classDriveMaster.html" title="Base class for motor control.">DriveMaster</a> class, specifying the pin connected to the motor:</li>
+</ol>
+<div class="fragment"><div class="line">Copy code</div>
+<div class="line"><a class="code hl_class" href="classDriveMaster.html">DriveMaster</a> *motor = <span class="keyword">new</span> <a class="code hl_class" href="classDriveMaster.html">DriveMaster</a>(motorPin);</div>
+<div class="ttc" id="aclassDriveMaster_html"><div class="ttname"><a href="classDriveMaster.html">DriveMaster</a></div><div class="ttdoc">Base class for motor control.</div><div class="ttdef"><b>Definition</b> DriveMaster.h:15</div></div>
+</div><!-- fragment --><ol type="1">
+<li><b>Initialize Motor Control</b> Call the begin() method to initialize motor control:</li>
+</ol>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> setup() {</div>
+<div class="line">    motor-&gt;<a class="code hl_function" href="classDriveMaster.html#a888e34b3f02bb46b879cd5337da0bb6e">begin</a>();</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassDriveMaster_html_a888e34b3f02bb46b879cd5337da0bb6e"><div class="ttname"><a href="classDriveMaster.html#a888e34b3f02bb46b879cd5337da0bb6e">DriveMaster::begin</a></div><div class="ttdeci">virtual void begin()</div><div class="ttdoc">Initialize the motor control.</div><div class="ttdef"><b>Definition</b> DriveMaster.cpp:7</div></div>
+</div><!-- fragment --><ol type="1">
+<li><b>Send Commands or Values</b> You can use the sendCommand() or sendValue() methods to send specific commands or values to the motor:</li>
+</ol>
+<div class="fragment"><div class="line"><span class="comment">// Send a specific command to the motor</span></div>
+<div class="line">motor-&gt;<a class="code hl_function" href="classDriveMaster.html#a431758ea82130c30da7911b180e352d3">sendCommand</a>(1000);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Send a value directly to the motor</span></div>
+<div class="line">motor-&gt;<a class="code hl_function" href="classDriveMaster.html#a8667c9cf196298aef9293ba3e78ff382">sendValue</a>(512);</div>
+<div class="ttc" id="aclassDriveMaster_html_a431758ea82130c30da7911b180e352d3"><div class="ttname"><a href="classDriveMaster.html#a431758ea82130c30da7911b180e352d3">DriveMaster::sendCommand</a></div><div class="ttdeci">virtual void sendCommand(uint16_t value)</div><div class="ttdoc">Send a command to the motor.</div><div class="ttdef"><b>Definition</b> DriveMaster.cpp:11</div></div>
+<div class="ttc" id="aclassDriveMaster_html_a8667c9cf196298aef9293ba3e78ff382"><div class="ttname"><a href="classDriveMaster.html#a8667c9cf196298aef9293ba3e78ff382">DriveMaster::sendValue</a></div><div class="ttdeci">virtual void sendValue(uint16_t value)</div><div class="ttdoc">Send a value to the motor.</div><div class="ttdef"><b>Definition</b> DriveMaster.cpp:12</div></div>
+</div><!-- fragment --><h1><a class="anchor" id="example"></a>
+Examples</h1>
+<h2><a class="anchor" id="autotoc_md7"></a>
+DShot Example</h2>
+<div class="fragment"></div><!-- fragment --><h1><a class="anchor" id="autotoc_md8"></a>
+License</h1>
+<p>This library is distributed under the GNU <a href="https://www.gnu.org/licenses/gpl-3.0.html">General Public License version 3.0</a>. </p>
+</div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"/>
 </div><!-- contents -->
 </div><!-- doc-content -->

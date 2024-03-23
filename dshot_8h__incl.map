@@ -1,0 +1,10 @@
+<map id="src/dshot.h" name="src/dshot.h">
+<area shape="rect" id="Node000001" title="Header file for the dshot class." alt="" coords="13,5,99,31"/>
+<area shape="rect" id="Node000002" href="$DriveMaster_8h.html" title="Header file for the DriveMaster class." alt="" coords="5,79,107,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="52,31,50,64,45,63,46,31"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="130,79,241,105"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="79,29,151,69,149,73,77,34"/>
+<area shape="poly" id="edge3_Node000002_Node000001" title=" " alt="" coords="60,78,62,46,67,46,66,79"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="18,153,94,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="59,105,59,137,53,137,53,105"/>
+</map>

@@ -100,46 +100,60 @@ $(function(){initNavTree('dshot_8h_source.html',''); initResizable(); });
   <div class="headertitle"><div class="title">dshot.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#ifndef DSHOT_H</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#define DSHOT_H</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;DriveMaster.h&quot;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;esp32-hal-rmt.h&gt;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define DSHOT_FRAME_LENGTH 16</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">enum</span> DShotType { DSHOT_150, DSHOT_300 };</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classdshot.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="classdshot.html">dshot</a> : <span class="keyword">public</span> <a class="code hl_class" href="classDriveMaster.html">DriveMaster</a> {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  rmt_obj_t *_channel = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  rmt_data_t _data[DSHOT_FRAME_LENGTH];</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  uint16_t _timingDuration0;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  uint16_t _timingDuration1;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  uint16_t _timingDurationBit;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  uint8_t calculateCrc(uint16_t value);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <span class="keywordtype">void</span> write(uint16_t value, <span class="keywordtype">bool</span> telemetery = <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <span class="keyword">explicit</span> <a class="code hl_class" href="classdshot.html">dshot</a>(<span class="keywordtype">int</span> pin, DShotType type = DSHOT_300);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  <a class="code hl_class" href="classdshot.html">~dshot</a>();</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <span class="keywordtype">void</span> begin() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <span class="keywordtype">void</span> sendCommand(uint16_t value) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="keywordtype">void</span> sendValue(uint16_t value) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>};</div>
+<a href="dshot_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#ifndef DSHOT_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#define DSHOT_H</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="DriveMaster_8h.html">DriveMaster.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;esp32-hal-rmt.h&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define DSHOT_FRAME_LENGTH 16</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="dshot_8h.html#ad0d3febc18f9d9ae1b4cfc93f01e6e0d">   17</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="dshot_8h.html#ad0d3febc18f9d9ae1b4cfc93f01e6e0d">DShotType</a> {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="dshot_8h.html#ad0d3febc18f9d9ae1b4cfc93f01e6e0da2fba9b48ec897ae8179a336e6c6d2ec8">   18</a></span>  <a class="code hl_enumvalue" href="dshot_8h.html#ad0d3febc18f9d9ae1b4cfc93f01e6e0da2fba9b48ec897ae8179a336e6c6d2ec8">DSHOT_150</a>, </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <a class="code hl_enumvalue" href="dshot_8h.html#ad0d3febc18f9d9ae1b4cfc93f01e6e0da1a1244acf7501914dc9f841a0416845f">DSHOT_300</a>  </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="dshot_8h.html#ad0d3febc18f9d9ae1b4cfc93f01e6e0da1a1244acf7501914dc9f841a0416845f">   20</a></span>};</div>
 </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassDriveMaster_html"><div class="ttname"><a href="classDriveMaster.html">DriveMaster</a></div><div class="ttdef"><b>Definition</b> DriveMaster.h:7</div></div>
-<div class="ttc" id="aclassdshot_html"><div class="ttname"><a href="classdshot.html">dshot</a></div><div class="ttdef"><b>Definition</b> dshot.h:11</div></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classdshot.html">   25</a></span><span class="keyword">class </span><a class="code hl_class" href="classdshot.html">dshot</a> : <span class="keyword">public</span> <a class="code hl_class" href="classDriveMaster.html">DriveMaster</a> {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  rmt_obj_t *_channel = <span class="keyword">nullptr</span>; </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  rmt_data_t _data[DSHOT_FRAME_LENGTH]; </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  uint16_t _timingDuration0;            </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  uint16_t _timingDuration1;            </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  uint16_t _timingDurationBit;          </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  uint8_t calculateCrc(uint16_t value);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <span class="keywordtype">void</span> write(uint16_t value, <span class="keywordtype">bool</span> telemetery = <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keyword">explicit</span> <a class="code hl_function" href="classdshot.html#a28ad1190417c6000e2ef2b6700b356fa">dshot</a>(<span class="keywordtype">int</span> pin, <a class="code hl_enumeration" href="dshot_8h.html#ad0d3febc18f9d9ae1b4cfc93f01e6e0d">DShotType</a> type = <a class="code hl_enumvalue" href="dshot_8h.html#ad0d3febc18f9d9ae1b4cfc93f01e6e0da1a1244acf7501914dc9f841a0416845f">DSHOT_300</a>);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <a class="code hl_function" href="classdshot.html#a2c1f432e10ce8fb8f0ac838788ab87cf">~dshot</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classdshot.html#a64f24c20ed8647a77e063f267a39fb13">begin</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classdshot.html#a3d9b530f32a6b78c648c83122c30ad1a">sendCommand</a>(uint16_t value) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classdshot.html#ad42389821083607759851ad548a4dfc8">sendValue</a>(uint16_t value) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>};</div>
+</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aDriveMaster_8h_html"><div class="ttname"><a href="DriveMaster_8h.html">DriveMaster.h</a></div><div class="ttdoc">Header file for the DriveMaster class.</div></div>
+<div class="ttc" id="aclassDriveMaster_html"><div class="ttname"><a href="classDriveMaster.html">DriveMaster</a></div><div class="ttdoc">Base class for motor control.</div><div class="ttdef"><b>Definition</b> DriveMaster.h:15</div></div>
+<div class="ttc" id="aclassdshot_html"><div class="ttname"><a href="classdshot.html">dshot</a></div><div class="ttdoc">Class representing DShot communication.</div><div class="ttdef"><b>Definition</b> dshot.h:25</div></div>
+<div class="ttc" id="aclassdshot_html_a28ad1190417c6000e2ef2b6700b356fa"><div class="ttname"><a href="classdshot.html#a28ad1190417c6000e2ef2b6700b356fa">dshot::dshot</a></div><div class="ttdeci">dshot(int pin, DShotType type=DSHOT_300)</div><div class="ttdoc">Construct a new dshot object with the specified pin and DShot type.</div><div class="ttdef"><b>Definition</b> dshot.cpp:3</div></div>
+<div class="ttc" id="aclassdshot_html_a2c1f432e10ce8fb8f0ac838788ab87cf"><div class="ttname"><a href="classdshot.html#a2c1f432e10ce8fb8f0ac838788ab87cf">dshot::~dshot</a></div><div class="ttdeci">~dshot()</div><div class="ttdoc">Destroy the dshot object.</div><div class="ttdef"><b>Definition</b> dshot.cpp:17</div></div>
+<div class="ttc" id="aclassdshot_html_a3d9b530f32a6b78c648c83122c30ad1a"><div class="ttname"><a href="classdshot.html#a3d9b530f32a6b78c648c83122c30ad1a">dshot::sendCommand</a></div><div class="ttdeci">void sendCommand(uint16_t value) override</div><div class="ttdoc">Send a DShot command with telemetry enabled.</div><div class="ttdef"><b>Definition</b> dshot.cpp:49</div></div>
+<div class="ttc" id="aclassdshot_html_a64f24c20ed8647a77e063f267a39fb13"><div class="ttname"><a href="classdshot.html#a64f24c20ed8647a77e063f267a39fb13">dshot::begin</a></div><div class="ttdeci">void begin() override</div><div class="ttdoc">Initialize the DShot communication.</div><div class="ttdef"><b>Definition</b> dshot.cpp:19</div></div>
+<div class="ttc" id="aclassdshot_html_ad42389821083607759851ad548a4dfc8"><div class="ttname"><a href="classdshot.html#ad42389821083607759851ad548a4dfc8">dshot::sendValue</a></div><div class="ttdeci">void sendValue(uint16_t value) override</div><div class="ttdoc">Send a DShot value with telemetry disabled.</div><div class="ttdef"><b>Definition</b> dshot.cpp:50</div></div>
+<div class="ttc" id="adshot_8h_html_ad0d3febc18f9d9ae1b4cfc93f01e6e0d"><div class="ttname"><a href="dshot_8h.html#ad0d3febc18f9d9ae1b4cfc93f01e6e0d">DShotType</a></div><div class="ttdeci">DShotType</div><div class="ttdoc">Enumeration for different DShot types.</div><div class="ttdef"><b>Definition</b> dshot.h:17</div></div>
+<div class="ttc" id="adshot_8h_html_ad0d3febc18f9d9ae1b4cfc93f01e6e0da1a1244acf7501914dc9f841a0416845f"><div class="ttname"><a href="dshot_8h.html#ad0d3febc18f9d9ae1b4cfc93f01e6e0da1a1244acf7501914dc9f841a0416845f">DSHOT_300</a></div><div class="ttdeci">@ DSHOT_300</div><div class="ttdef"><b>Definition</b> dshot.h:19</div></div>
+<div class="ttc" id="adshot_8h_html_ad0d3febc18f9d9ae1b4cfc93f01e6e0da2fba9b48ec897ae8179a336e6c6d2ec8"><div class="ttname"><a href="dshot_8h.html#ad0d3febc18f9d9ae1b4cfc93f01e6e0da2fba9b48ec897ae8179a336e6c6d2ec8">DSHOT_150</a></div><div class="ttdeci">@ DSHOT_150</div><div class="ttdef"><b>Definition</b> dshot.h:18</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><b>dshot.h</b></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dshot_8h.html">dshot.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

@@ -100,35 +100,44 @@ $(function(){initNavTree('DriveMaster_8h_source.html',''); initResizable(); });
   <div class="headertitle"><div class="title">DriveMaster.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#ifndef DRIVEMASTER_H</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#define DRIVEMASTER_H</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="foldopen" id="foldopen00007" data-start="{" data-end="};">
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classDriveMaster.html">    7</a></span><span class="keyword">class </span><a class="code hl_class" href="classDriveMaster.html">DriveMaster</a> {</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>  <a class="code hl_class" href="classDriveMaster.html">DriveMaster</a>(<span class="keywordtype">int</span> pin);</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>  <span class="keyword">virtual</span> <a class="code hl_class" href="classDriveMaster.html">~DriveMaster</a>();</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> begin();</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> write(uint16_t value, <span class="keywordtype">bool</span> telemetery = <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> sendCommand(uint16_t value);</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> sendValue(uint16_t value);</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  <span class="keywordtype">int</span> _pin;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>};</div>
+<a href="DriveMaster_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#ifndef DRIVEMASTER_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#define DRIVEMASTER_H</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classDriveMaster.html">   15</a></span><span class="keyword">class </span><a class="code hl_class" href="classDriveMaster.html">DriveMaster</a> {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <a class="code hl_function" href="classDriveMaster.html#a9e19f7a7480622e570aba8a6147cb021">DriveMaster</a>(<span class="keywordtype">int</span> pin);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <span class="keyword">virtual</span> <a class="code hl_function" href="classDriveMaster.html#ad3cdd8c68c3e44c002dc133811ab1136">~DriveMaster</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classDriveMaster.html#a888e34b3f02bb46b879cd5337da0bb6e">begin</a>();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classDriveMaster.html#a53809e84ec9a4a08282431f6b4bae69b">write</a>(uint16_t value, <span class="keywordtype">bool</span> telemetery = <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classDriveMaster.html#a431758ea82130c30da7911b180e352d3">sendCommand</a>(uint16_t value);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classDriveMaster.html#a8667c9cf196298aef9293ba3e78ff382">sendValue</a>(uint16_t value);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classDriveMaster.html#a8a1e4f2e796cf39282f2ca4a4665d298">   48</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="classDriveMaster.html#a8a1e4f2e796cf39282f2ca4a4665d298">_pin</a>; </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>};</div>
 </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;dshot.h&quot;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassDriveMaster_html"><div class="ttname"><a href="classDriveMaster.html">DriveMaster</a></div><div class="ttdef"><b>Definition</b> DriveMaster.h:7</div></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#include &quot;<a class="code" href="dshot_8h.html">dshot.h</a>&quot;</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassDriveMaster_html"><div class="ttname"><a href="classDriveMaster.html">DriveMaster</a></div><div class="ttdoc">Base class for motor control.</div><div class="ttdef"><b>Definition</b> DriveMaster.h:15</div></div>
+<div class="ttc" id="aclassDriveMaster_html_a431758ea82130c30da7911b180e352d3"><div class="ttname"><a href="classDriveMaster.html#a431758ea82130c30da7911b180e352d3">DriveMaster::sendCommand</a></div><div class="ttdeci">virtual void sendCommand(uint16_t value)</div><div class="ttdoc">Send a command to the motor.</div><div class="ttdef"><b>Definition</b> DriveMaster.cpp:11</div></div>
+<div class="ttc" id="aclassDriveMaster_html_a53809e84ec9a4a08282431f6b4bae69b"><div class="ttname"><a href="classDriveMaster.html#a53809e84ec9a4a08282431f6b4bae69b">DriveMaster::write</a></div><div class="ttdeci">virtual void write(uint16_t value, bool telemetery=false)</div><div class="ttdoc">Write a command to the motor.</div><div class="ttdef"><b>Definition</b> DriveMaster.cpp:9</div></div>
+<div class="ttc" id="aclassDriveMaster_html_a8667c9cf196298aef9293ba3e78ff382"><div class="ttname"><a href="classDriveMaster.html#a8667c9cf196298aef9293ba3e78ff382">DriveMaster::sendValue</a></div><div class="ttdeci">virtual void sendValue(uint16_t value)</div><div class="ttdoc">Send a value to the motor.</div><div class="ttdef"><b>Definition</b> DriveMaster.cpp:12</div></div>
+<div class="ttc" id="aclassDriveMaster_html_a888e34b3f02bb46b879cd5337da0bb6e"><div class="ttname"><a href="classDriveMaster.html#a888e34b3f02bb46b879cd5337da0bb6e">DriveMaster::begin</a></div><div class="ttdeci">virtual void begin()</div><div class="ttdoc">Initialize the motor control.</div><div class="ttdef"><b>Definition</b> DriveMaster.cpp:7</div></div>
+<div class="ttc" id="aclassDriveMaster_html_a8a1e4f2e796cf39282f2ca4a4665d298"><div class="ttname"><a href="classDriveMaster.html#a8a1e4f2e796cf39282f2ca4a4665d298">DriveMaster::_pin</a></div><div class="ttdeci">int _pin</div><div class="ttdef"><b>Definition</b> DriveMaster.h:48</div></div>
+<div class="ttc" id="aclassDriveMaster_html_a9e19f7a7480622e570aba8a6147cb021"><div class="ttname"><a href="classDriveMaster.html#a9e19f7a7480622e570aba8a6147cb021">DriveMaster::DriveMaster</a></div><div class="ttdeci">DriveMaster(int pin)</div><div class="ttdoc">Construct a new DriveMaster object with the specified pin.</div><div class="ttdef"><b>Definition</b> DriveMaster.cpp:3</div></div>
+<div class="ttc" id="aclassDriveMaster_html_ad3cdd8c68c3e44c002dc133811ab1136"><div class="ttname"><a href="classDriveMaster.html#ad3cdd8c68c3e44c002dc133811ab1136">DriveMaster::~DriveMaster</a></div><div class="ttdeci">virtual ~DriveMaster()</div><div class="ttdoc">Destroy the DriveMaster object.</div><div class="ttdef"><b>Definition</b> DriveMaster.cpp:5</div></div>
+<div class="ttc" id="adshot_8h_html"><div class="ttname"><a href="dshot_8h.html">dshot.h</a></div><div class="ttdoc">Header file for the dshot class.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><b>DriveMaster.h</b></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="DriveMaster_8h.html">DriveMaster.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

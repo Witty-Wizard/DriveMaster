@@ -25,21 +25,50 @@
 var NAVTREE =
 [
   [ "DriveMaster", "index.html", [
-    [ "index", "md_Docs_2index.html", null ],
+    [ "Supported Protocol", "index.html#autotoc_md0", [
+      [ "DShot300", "index.html#dshot300", [
+        [ "Configuration", "index.html#autotoc_md1", null ]
+      ] ],
+      [ "DShot600", "index.html#dshot600", [
+        [ "Configuration", "index.html#autotoc_md2", null ]
+      ] ]
+    ] ],
+    [ "Getting Started", "index.html#autotoc_md3", null ],
+    [ "Installation", "index.html#installation", [
+      [ "Arduino Installation", "index.html#autotoc_md4", null ],
+      [ "PlatformIO Installation", "index.html#autotoc_md5", null ]
+    ] ],
+    [ "Tutorial", "index.html#tutorial", [
+      [ "Using DriveMaster Library for Motor Control", "index.html#autotoc_md6", null ]
+    ] ],
+    [ "Examples", "index.html#example", [
+      [ "DShot Example", "index.html#autotoc_md7", null ]
+    ] ],
+    [ "License", "index.html#autotoc_md8", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
-      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ]
+      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
+      [ "Class Members", "functions.html", [
+        [ "All", "functions.html", null ],
+        [ "Functions", "functions_func.html", null ],
+        [ "Variables", "functions_vars.html", null ]
+      ] ]
     ] ],
     [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ]
+      [ "File List", "files.html", "files_dup" ],
+      [ "File Members", "globals.html", [
+        [ "All", "globals.html", null ],
+        [ "Enumerations", "globals_enum.html", null ],
+        [ "Enumerator", "globals_eval.html", null ]
+      ] ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"DriveMaster_8h_source.html"
+"DriveMaster_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
