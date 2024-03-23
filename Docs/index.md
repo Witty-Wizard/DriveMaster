@@ -67,7 +67,6 @@ Include the required library at the beginning of your sketch:
 Create an instance of the DriveMaster class, specifying the pin connected to the motor:
 
 ```cpp
-Copy code
 DriveMaster *motor = new DriveMaster(motorPin);
 ```
 
