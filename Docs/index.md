@@ -48,7 +48,7 @@ To use the DriveMaster library in your Arduino projects, follow these installati
 If you are using PlatformIO, you can install the DriveMaster library directly from the PlatformIO Library Manager. Add the following line to your `platformio.ini` file:
 
 ```ini
-lib_deps = Witty-Wizard/DriveMaster @ ^0.1.0
+lib_deps = Witty-Wizard/DriveMaster @ ^0.0.1
 ```
 ## Tutorial {#tutorial}
 
@@ -67,7 +67,7 @@ Include the required library at the beginning of your sketch:
 Create an instance of the DriveMaster class, specifying the pin connected to the motor:
 
 ```cpp
-DriveMaster *motor = new DriveMaster(motorPin);
+DriveMaster *motor = new dshot(motorPin);
 ```
 
 3. **Initialize Motor Control**
