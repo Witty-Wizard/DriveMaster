@@ -148,7 +148,7 @@ Arduino Installation</h3>
 <h3><a class="anchor" id="autotoc_md5"></a>
 PlatformIO Installation</h3>
 <p>If you are using PlatformIO, you can install the <a class="el" href="classDriveMaster.html" title="Base class for motor control.">DriveMaster</a> library directly from the PlatformIO Library Manager. Add the following line to your <code>platformio.ini</code> file:</p>
-<div class="fragment"><div class="line">lib_deps = Witty-Wizard/DriveMaster @ ^0.1.0</div>
+<div class="fragment"><div class="line">lib_deps = Witty-Wizard/DriveMaster @ ^0.0.1</div>
 </div><!-- fragment --> <h2><a class="anchor" id="tutorial"></a>
 Tutorial</h2>
 <h3><a class="anchor" id="autotoc_md6"></a>
@@ -162,8 +162,9 @@ Using DriveMaster Library for Motor Control</h3>
 </div><!-- fragment --><ol type="1">
 <li><b>Instantiate <a class="el" href="classDriveMaster.html" title="Base class for motor control.">DriveMaster</a> Object</b> Create an instance of the <a class="el" href="classDriveMaster.html" title="Base class for motor control.">DriveMaster</a> class, specifying the pin connected to the motor:</li>
 </ol>
-<div class="fragment"><div class="line"><a class="code hl_class" href="classDriveMaster.html">DriveMaster</a> *motor = <span class="keyword">new</span> <a class="code hl_class" href="classDriveMaster.html">DriveMaster</a>(motorPin);</div>
+<div class="fragment"><div class="line"><a class="code hl_class" href="classDriveMaster.html">DriveMaster</a> *motor = <span class="keyword">new</span> <a class="code hl_class" href="classdshot.html">dshot</a>(motorPin);</div>
 <div class="ttc" id="aclassDriveMaster_html"><div class="ttname"><a href="classDriveMaster.html">DriveMaster</a></div><div class="ttdoc">Base class for motor control.</div><div class="ttdef"><b>Definition</b> DriveMaster.h:15</div></div>
+<div class="ttc" id="aclassdshot_html"><div class="ttname"><a href="classdshot.html">dshot</a></div><div class="ttdoc">Class representing DShot communication.</div><div class="ttdef"><b>Definition</b> dshot.h:25</div></div>
 </div><!-- fragment --><ol type="1">
 <li><b>Initialize Motor Control</b> Call the begin() method to initialize motor control:</li>
 </ol>
