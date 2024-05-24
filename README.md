@@ -2,6 +2,9 @@
     <a href="https://github.com/Witty-Wizard/DriveMaster/releases">
         <img src="https://img.shields.io/github/v/release/Witty-Wizard/DriveMaster" alt="GitHub Release">
     </a>
+    <a href="https://github.com/Witty-Wizard/DriveMaster/actions/workflows/arduinio_ci.yaml">
+    <img src="https://github.com/Witty-Wizard/DriveMaster/actions/workflows/arduinio_ci.yaml/badge.svg" alt="Arduino_CI">
+    </a>
     <a href="https://github.com/Witty-Wizard/DriveMaster/actions/workflows/main.yaml">
         <img src="https://github.com/Witty-Wizard/DriveMaster/actions/workflows/main.yaml/badge.svg" alt="Doxygen CI">
     </a>
