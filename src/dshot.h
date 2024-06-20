@@ -24,7 +24,6 @@ enum DShotType {
  */
 class dshot : public DriveMaster {
 private:
-  rmt_obj_t *_channel = nullptr; /**< RMT channel for DShot communication */
   rmt_data_t _data[DSHOT_FRAME_LENGTH]; /**< RMT data array for DShot frames */
   uint16_t _timingDuration0;            /**< Timing duration for logic 0 */
   uint16_t _timingDuration1;            /**< Timing duration for logic 1 */

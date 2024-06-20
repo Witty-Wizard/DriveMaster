@@ -16,10 +16,7 @@ dshot::dshot(int pin, DShotType type) : DriveMaster(pin) {
 }
 dshot::~dshot() {}
 
-void dshot::begin() {
-  _channel = rmtInit(_pin, RMT_TX_MODE, RMT_MEM_64);
-  rmtSetTick(_channel, 1000);
-}
+void dshot::begin() { rmtInit(_pin, RMT_TX_MODE, RMT_MEM_NUM_BLOCKS_1, 1000); }
 
 void dshot::write(uint16_t value, bool telemetery) {
   uint8_t crc = calculateCrc(value);
@@ -39,7 +36,7 @@ void dshot::write(uint16_t value, bool telemetery) {
     _data[i].level0 = 1;
     _data[i].level1 = 0;
   }
-  rmtWrite(_channel, _data, DSHOT_FRAME_LENGTH);
+  rmtWrite(_pin, _data, DSHOT_FRAME_LENGTH,10);
 }
 
 uint8_t dshot::calculateCrc(uint16_t value) {
