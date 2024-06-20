@@ -28,4 +28,4 @@ To use the DriveMaster library in your Arduino projects, you can install it via 
 Add the following line to your `platformio.ini` file:
 
 ```ini
-lib_deps = Drive-Master/DriveMaster @ ^0.0.1
+lib_deps = Witty-Wizard/DriveMaster
