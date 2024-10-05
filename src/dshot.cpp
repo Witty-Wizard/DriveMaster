@@ -1,5 +1,7 @@
 #include "dshot.h"
 
+#if defined(ARDUINO_ARCH_ESP32)
+
 dshot::dshot(int pin, DShotType type) : DriveMaster(pin) {
   switch (type) {
   case DSHOT_150:
@@ -45,3 +47,4 @@ uint8_t dshot::calculateCrc(uint16_t value) {
 
 void dshot::sendCommand(uint16_t value) { write(value, true); }
 void dshot::sendValue(uint16_t value) { write(value, false); }
+#endif

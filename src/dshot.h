@@ -8,13 +8,16 @@
 #define DSHOT_H
 
 #include "DriveMaster.h"
+
+#if defined(ARDUINO_ARCH_ESP32)
 #include <esp32-hal-rmt.h>
 #define DSHOT_FRAME_LENGTH 16
 
 /**
  * @brief Enumeration for different DShot types.
  */
-enum DShotType {
+enum DShotType
+{
   DSHOT_150, /**< DShot150 protocol */
   DSHOT_300  /**< DShot300 protocol */
 };
@@ -22,7 +25,8 @@ enum DShotType {
 /**
  * @brief Class representing DShot communication.
  */
-class dshot : public DriveMaster {
+class dshot : public DriveMaster
+{
 private:
   rmt_data_t _data[DSHOT_FRAME_LENGTH]; /**< RMT data array for DShot frames */
   uint16_t _timingDuration0;            /**< Timing duration for logic 0 */
@@ -68,5 +72,5 @@ public:
    */
   void sendValue(uint16_t value) override;
 };
-
+#endif
 #endif
