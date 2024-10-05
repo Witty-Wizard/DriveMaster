@@ -25,25 +25,39 @@
 var NAVTREE =
 [
   [ "DriveMaster", "index.html", [
-    [ "Supported Protocol", "index.html#autotoc_md0", [
+    [ "Supported Protocol", "index.html#autotoc_md12", [
       [ "DShot", "index.html#dshot", [
-        [ "Frame Structure", "index.html#autotoc_md1", null ],
-        [ "DShot Versions and Bitrates", "index.html#autotoc_md2", null ]
+        [ "Frame Structure", "index.html#autotoc_md13", null ],
+        [ "DShot Versions and Bitrates", "index.html#autotoc_md14", null ]
       ] ]
     ] ],
-    [ "Getting Started", "index.html#autotoc_md3", [
+    [ "Getting Started", "index.html#autotoc_md15", [
       [ "Installation", "index.html#installation", [
-        [ "Arduino Installation", "index.html#autotoc_md4", null ],
-        [ "PlatformIO Installation", "index.html#autotoc_md5", null ]
+        [ "Arduino Installation", "index.html#autotoc_md16", null ],
+        [ "PlatformIO Installation", "index.html#autotoc_md17", null ]
       ] ],
       [ "Tutorial", "index.html#tutorial", [
-        [ "Using DriveMaster Library for Motor Control", "index.html#autotoc_md6", null ]
+        [ "Using DriveMaster Library for Motor Control", "index.html#autotoc_md18", null ]
       ] ],
       [ "Examples", "index.html#example", [
-        [ "DShot Example", "index.html#autotoc_md7", null ]
+        [ "DShot Example", "index.html#autotoc_md19", null ]
       ] ]
     ] ],
-    [ "License", "index.html#autotoc_md8", null ],
+    [ "License", "index.html#autotoc_md20", null ],
+    [ "Contributor Covenant Code of Conduct", "md_CODE__OF__CONDUCT.html", [
+      [ "Our Pledge", "md_CODE__OF__CONDUCT.html#autotoc_md1", null ],
+      [ "Our Standards", "md_CODE__OF__CONDUCT.html#autotoc_md2", null ],
+      [ "Enforcement Responsibilities", "md_CODE__OF__CONDUCT.html#autotoc_md3", null ],
+      [ "Scope", "md_CODE__OF__CONDUCT.html#autotoc_md4", null ],
+      [ "Enforcement", "md_CODE__OF__CONDUCT.html#autotoc_md5", null ],
+      [ "Enforcement Guidelines", "md_CODE__OF__CONDUCT.html#autotoc_md6", [
+        [ "Correction", "md_CODE__OF__CONDUCT.html#autotoc_md7", null ],
+        [ "Warning", "md_CODE__OF__CONDUCT.html#autotoc_md8", null ],
+        [ "Temporary Ban", "md_CODE__OF__CONDUCT.html#autotoc_md9", null ],
+        [ "Permanent Ban", "md_CODE__OF__CONDUCT.html#autotoc_md10", null ]
+      ] ],
+      [ "Attribution", "md_CODE__OF__CONDUCT.html#autotoc_md11", null ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -55,12 +69,7 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ],
-      [ "File Members", "globals.html", [
-        [ "All", "globals.html", null ],
-        [ "Enumerations", "globals_enum.html", null ],
-        [ "Enumerator", "globals_eval.html", null ]
-      ] ]
+      [ "File List", "files.html", "files_dup" ]
     ] ]
   ] ]
 ];

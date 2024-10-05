@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['versions_20and_20bitrates_0',['DShot Versions and Bitrates',['../index.html#autotoc_md2',1,'']]]
+  ['motor_20control_0',['Using DriveMaster Library for Motor Control',['../index.html#autotoc_md18',1,'']]]
 ];

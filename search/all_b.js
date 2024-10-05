@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['platformio_20installation_0',['PlatformIO Installation',['../index.html#autotoc_md5',1,'']]],
-  ['protocol_1',['Supported Protocol',['../index.html#autotoc_md0',1,'']]]
+  ['getting_20started_0',['Getting Started',['../index.html#autotoc_md15',1,'']]],
+  ['guidelines_1',['Enforcement Guidelines',['../md_CODE__OF__CONDUCT.html#autotoc_md6',1,'']]]
 ];

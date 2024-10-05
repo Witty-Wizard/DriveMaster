@@ -1,14 +1,5 @@
 var searchData=
 [
-  ['drivemaster_0',['DriveMaster',['../classDriveMaster.html',1,'DriveMaster'],['../classDriveMaster.html#a9e19f7a7480622e570aba8a6147cb021',1,'DriveMaster::DriveMaster()'],['../index.html',1,'DriveMaster']]],
-  ['drivemaster_20library_20for_20motor_20control_1',['Using DriveMaster Library for Motor Control',['../index.html#autotoc_md6',1,'']]],
-  ['drivemaster_2eh_2',['DriveMaster.h',['../DriveMaster_8h.html',1,'']]],
-  ['dshot_3',['DShot',['../index.html#dshot',1,'']]],
-  ['dshot_4',['dshot',['../classdshot.html',1,'dshot'],['../classdshot.html#a28ad1190417c6000e2ef2b6700b356fa',1,'dshot::dshot()']]],
-  ['dshot_20example_5',['DShot Example',['../index.html#autotoc_md7',1,'']]],
-  ['dshot_20versions_20and_20bitrates_6',['DShot Versions and Bitrates',['../index.html#autotoc_md2',1,'']]],
-  ['dshot_2eh_7',['dshot.h',['../dshot_8h.html',1,'']]],
-  ['dshot_5f150_8',['DSHOT_150',['../dshot_8h.html#ad0d3febc18f9d9ae1b4cfc93f01e6e0da2fba9b48ec897ae8179a336e6c6d2ec8',1,'dshot.h']]],
-  ['dshot_5f300_9',['DSHOT_300',['../dshot_8h.html#ad0d3febc18f9d9ae1b4cfc93f01e6e0da1a1244acf7501914dc9f841a0416845f',1,'dshot.h']]],
-  ['dshottype_10',['DShotType',['../dshot_8h.html#ad0d3febc18f9d9ae1b4cfc93f01e6e0d',1,'dshot.h']]]
+  ['_5fdir_5fpin_0',['_dir_pin',['../classDriveMaster.html#afd144c992e930209d2ffaaead0b2b24c',1,'DriveMaster']]],
+  ['_5fpin_1',['_pin',['../classDriveMaster.html#a8a1e4f2e796cf39282f2ca4a4665d298',1,'DriveMaster']]]
 ];
