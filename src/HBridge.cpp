@@ -12,15 +12,8 @@ void HBridge::begin()
 
 void HBridge::write(int16_t value)
 {
-    value = value % 256;
-    if (value >= 0)
-    {
-        digitalWrite(_dir_pin, LOW);
-    }
-    else
-    {
-        digitalWrite(_dir_pin, HIGH);
-        value = 255 + value;
-    }
+    value = constrain(value, -255, 255);
+    digitalWrite(_dir_pin, (value > 0) ? LOW : HIGH);
+    value = (value > 0) ? value : 255 + value;
     analogWrite(_pin, value);
 }
