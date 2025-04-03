@@ -1,0 +1,541 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API Documentation &mdash; DriveMaster 0.0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=47de8214"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Examples" href="example.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            DriveMaster
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#arduino-installation">Arduino Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#platformio-installation">PlatformIO Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#using-drivemaster-library-for-motor-control">Using DriveMaster Library for Motor Control</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="example.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="example.html#dshot-example">DShot Example</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv411DriveMaster"><code class="docutils literal notranslate"><span class="pre">DriveMaster</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N11DriveMaster11DriveMasterEi"><code class="docutils literal notranslate"><span class="pre">DriveMaster()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N11DriveMaster11DriveMasterEii"><code class="docutils literal notranslate"><span class="pre">DriveMaster()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N11DriveMasterD0Ev"><code class="docutils literal notranslate"><span class="pre">~DriveMaster()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N11DriveMaster5beginEv"><code class="docutils literal notranslate"><span class="pre">begin()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N11DriveMaster5writeE8uint16_tb"><code class="docutils literal notranslate"><span class="pre">write()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N11DriveMaster5writeE7int16_t"><code class="docutils literal notranslate"><span class="pre">write()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N11DriveMaster11sendCommandE8uint16_t"><code class="docutils literal notranslate"><span class="pre">sendCommand()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N11DriveMaster9sendValueE8uint16_t"><code class="docutils literal notranslate"><span class="pre">sendValue()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N11DriveMaster4_pinE"><code class="docutils literal notranslate"><span class="pre">_pin</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N11DriveMaster8_dir_pinE"><code class="docutils literal notranslate"><span class="pre">_dir_pin</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv47HBridge"><code class="docutils literal notranslate"><span class="pre">HBridge</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N7HBridge7HBridgeEii"><code class="docutils literal notranslate"><span class="pre">HBridge()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N7HBridge5beginEv"><code class="docutils literal notranslate"><span class="pre">begin()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N7HBridge5writeE7int16_t"><code class="docutils literal notranslate"><span class="pre">write()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#conf"><code class="docutils literal notranslate"><span class="pre">conf</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#conf.project"><code class="docutils literal notranslate"><span class="pre">project</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conf.copyright"><code class="docutils literal notranslate"><span class="pre">copyright</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conf.author"><code class="docutils literal notranslate"><span class="pre">author</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conf.release"><code class="docutils literal notranslate"><span class="pre">release</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conf.extensions"><code class="docutils literal notranslate"><span class="pre">extensions</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conf.templates_path"><code class="docutils literal notranslate"><span class="pre">templates_path</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conf.exclude_patterns"><code class="docutils literal notranslate"><span class="pre">exclude_patterns</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conf.html_theme"><code class="docutils literal notranslate"><span class="pre">html_theme</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conf.html_static_path"><code class="docutils literal notranslate"><span class="pre">html_static_path</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conf.breathe_projects"><code class="docutils literal notranslate"><span class="pre">breathe_projects</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conf.breathe_default_project"><code class="docutils literal notranslate"><span class="pre">breathe_default_project</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conf.html_theme_options"><code class="docutils literal notranslate"><span class="pre">html_theme_options</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conf.html_context"><code class="docutils literal notranslate"><span class="pre">html_context</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#c.MOTOR_PIN"><code class="docutils literal notranslate"><span class="pre">MOTOR_PIN</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv45setupv"><code class="docutils literal notranslate"><span class="pre">setup()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv44loopv"><code class="docutils literal notranslate"><span class="pre">loop()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv45motor"><code class="docutils literal notranslate"><span class="pre">motor</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#c.DRIVEMASTER_H"><code class="docutils literal notranslate"><span class="pre">DRIVEMASTER_H</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#c.DSHOT_H"><code class="docutils literal notranslate"><span class="pre">DSHOT_H</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#c.HBRIDGE_H"><code class="docutils literal notranslate"><span class="pre">HBRIDGE_H</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DriveMaster</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">API Documentation</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/Robotics-PEC/Getting-Started-with-ROS/blob/main/Docs/source/apidocumentation.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="api-documentation">
+<span id="apidocumentation"></span><h1>API Documentation<a class="headerlink" href="#api-documentation" title="Link to this heading"></a></h1>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv411DriveMaster">
+<span id="_CPPv311DriveMaster"></span><span id="_CPPv211DriveMaster"></span><span id="DriveMaster"></span><span class="target" id="classDriveMaster"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DriveMaster</span></span></span><a class="headerlink" href="#_CPPv411DriveMaster" title="Link to this definition"></a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;<a class="reference internal" href="#DriveMaster_8h"><span class="std std-ref">DriveMaster.h</span></a>&gt;</em></div>
+<p>Base class for motor control. </p>
+<p>Subclassed by <a class="reference internal" href="#classHBridge"><span class="std std-ref">HBridge</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11DriveMaster11DriveMasterEi">
+<span id="_CPPv3N11DriveMaster11DriveMasterEi"></span><span id="_CPPv2N11DriveMaster11DriveMasterEi"></span><span id="DriveMaster::DriveMaster__i"></span><span class="target" id="classDriveMaster_1a9e19f7a7480622e570aba8a6147cb021"></span><span class="sig-name descname"><span class="n"><span class="pre">DriveMaster</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pin</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11DriveMaster11DriveMasterEi" title="Link to this definition"></a><br /></dt>
+<dd><p>Construct a new <a class="reference internal" href="#classDriveMaster"><span class="std std-ref">DriveMaster</span></a> object with only the pin. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pin</strong> – The pin number for motor control. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11DriveMaster11DriveMasterEii">
+<span id="_CPPv3N11DriveMaster11DriveMasterEii"></span><span id="_CPPv2N11DriveMaster11DriveMasterEii"></span><span id="DriveMaster::DriveMaster__i.i"></span><span class="target" id="classDriveMaster_1acc3382ace376bbd203af1cff040816bb"></span><span class="sig-name descname"><span class="n"><span class="pre">DriveMaster</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pin</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dir_pin</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11DriveMaster11DriveMasterEii" title="Link to this definition"></a><br /></dt>
+<dd><p>Construct a new <a class="reference internal" href="#classDriveMaster"><span class="std std-ref">DriveMaster</span></a> object with the specified pin and direction pin. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pin</strong> – The pin number for motor control. </p></li>
+<li><p><strong>dir_pin</strong> – The pin number for direction control. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11DriveMasterD0Ev">
+<span id="_CPPv3N11DriveMasterD0Ev"></span><span id="_CPPv2N11DriveMasterD0Ev"></span><span id="DriveMaster::~DriveMaster"></span><span class="target" id="classDriveMaster_1ad3cdd8c68c3e44c002dc133811ab1136"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~DriveMaster</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11DriveMasterD0Ev" title="Link to this definition"></a><br /></dt>
+<dd><p>Destroy the <a class="reference internal" href="#classDriveMaster"><span class="std std-ref">DriveMaster</span></a> object. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11DriveMaster5beginEv">
+<span id="_CPPv3N11DriveMaster5beginEv"></span><span id="_CPPv2N11DriveMaster5beginEv"></span><span id="DriveMaster::begin"></span><span class="target" id="classDriveMaster_1a888e34b3f02bb46b879cd5337da0bb6e"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">begin</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11DriveMaster5beginEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Initialize the motor control. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11DriveMaster5writeE8uint16_tb">
+<span id="_CPPv3N11DriveMaster5writeE8uint16_tb"></span><span id="_CPPv2N11DriveMaster5writeE8uint16_tb"></span><span id="DriveMaster::write__uint16_t.b"></span><span class="target" id="classDriveMaster_1a53809e84ec9a4a08282431f6b4bae69b"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">telemetery</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11DriveMaster5writeE8uint16_tb" title="Link to this definition"></a><br /></dt>
+<dd><p>Write a command to the motor. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> – The command value to write. </p></li>
+<li><p><strong>telemetry</strong> – Flag indicating telemetry presence. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11DriveMaster5writeE7int16_t">
+<span id="_CPPv3N11DriveMaster5writeE7int16_t"></span><span id="_CPPv2N11DriveMaster5writeE7int16_t"></span><span id="DriveMaster::write__int16_t"></span><span class="target" id="classDriveMaster_1ac9d224e8750d4d25464f5265108f4ea8"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">int16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11DriveMaster5writeE7int16_t" title="Link to this definition"></a><br /></dt>
+<dd><p>Write a command to the motor using an 8-bit signed integer value. The value ranges from -255 to 255, where: </p>
+<p><ul class="simple">
+<li><p>255 is full speed forward</p></li>
+<li><p>-255 is full speed reverse</p></li>
+<li><p>0 is stop </p></li>
+</ul>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> – The signed 8-bit command value to write (-255 to 255). </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11DriveMaster11sendCommandE8uint16_t">
+<span id="_CPPv3N11DriveMaster11sendCommandE8uint16_t"></span><span id="_CPPv2N11DriveMaster11sendCommandE8uint16_t"></span><span id="DriveMaster::sendCommand__uint16_t"></span><span class="target" id="classDriveMaster_1a431758ea82130c30da7911b180e352d3"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sendCommand</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11DriveMaster11sendCommandE8uint16_t" title="Link to this definition"></a><br /></dt>
+<dd><p>Send a command to the motor. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> – The command value to send. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11DriveMaster9sendValueE8uint16_t">
+<span id="_CPPv3N11DriveMaster9sendValueE8uint16_t"></span><span id="_CPPv2N11DriveMaster9sendValueE8uint16_t"></span><span id="DriveMaster::sendValue__uint16_t"></span><span class="target" id="classDriveMaster_1a8667c9cf196298aef9293ba3e78ff382"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sendValue</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11DriveMaster9sendValueE8uint16_t" title="Link to this definition"></a><br /></dt>
+<dd><p>Send a value to the motor. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> – The value to send. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-attributes">Protected Attributes</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11DriveMaster4_pinE">
+<span id="_CPPv3N11DriveMaster4_pinE"></span><span id="_CPPv2N11DriveMaster4_pinE"></span><span id="DriveMaster::_pin__i"></span><span class="target" id="classDriveMaster_1a8a1e4f2e796cf39282f2ca4a4665d298"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_pin</span></span></span><a class="headerlink" href="#_CPPv4N11DriveMaster4_pinE" title="Link to this definition"></a><br /></dt>
+<dd><p>Pin number for motor control. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11DriveMaster8_dir_pinE">
+<span id="_CPPv3N11DriveMaster8_dir_pinE"></span><span id="_CPPv2N11DriveMaster8_dir_pinE"></span><span id="DriveMaster::_dir_pin__i"></span><span class="target" id="classDriveMaster_1afd144c992e930209d2ffaaead0b2b24c"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_dir_pin</span></span></span><a class="headerlink" href="#_CPPv4N11DriveMaster8_dir_pinE" title="Link to this definition"></a><br /></dt>
+<dd><p>Pin number for direction control. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv47HBridge">
+<span id="_CPPv37HBridge"></span><span id="_CPPv27HBridge"></span><span id="HBridge"></span><span class="target" id="classHBridge"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HBridge</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv411DriveMaster" title="DriveMaster"><span class="n"><span class="pre">DriveMaster</span></span></a><a class="headerlink" href="#_CPPv47HBridge" title="Link to this definition"></a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;<a class="reference internal" href="#HBridge_8h"><span class="std std-ref">HBridge.h</span></a>&gt;</em></div>
+<p>A class to control an H-Bridge motor driver. </p>
+<p>The <a class="reference internal" href="#classHBridge"><span class="std std-ref">HBridge</span></a> class provides methods to initialize and control the speed and direction of a motor using an H-Bridge. It inherits from the <a class="reference internal" href="#classDriveMaster"><span class="std std-ref">DriveMaster</span></a> base class, which provides the control pins. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7HBridge7HBridgeEii">
+<span id="_CPPv3N7HBridge7HBridgeEii"></span><span id="_CPPv2N7HBridge7HBridgeEii"></span><span id="HBridge::HBridge__i.i"></span><span class="target" id="classHBridge_1a67e4f4e47412654b52301bcfd4e5cae0"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HBridge</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pin</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dir_pin</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HBridge7HBridgeEii" title="Link to this definition"></a><br /></dt>
+<dd><p>Constructs an <a class="reference internal" href="#classHBridge"><span class="std std-ref">HBridge</span></a> object with specified control pins. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pin</strong> – The PWM pin used for controlling motor speed (inherited from <a class="reference internal" href="#classDriveMaster"><span class="std std-ref">DriveMaster</span></a>). </p></li>
+<li><p><strong>dir_pin</strong> – The direction control pin (inherited from <a class="reference internal" href="#classDriveMaster"><span class="std std-ref">DriveMaster</span></a>). </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7HBridge5beginEv">
+<span id="_CPPv3N7HBridge5beginEv"></span><span id="_CPPv2N7HBridge5beginEv"></span><span id="HBridge::begin"></span><span class="target" id="classHBridge_1a1bc46d790decacfeaebdc36f31587c54"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">begin</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N7HBridge5beginEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Initializes the H-Bridge driver. </p>
+<p>Sets up the necessary pin modes for motor control. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7HBridge5writeE7int16_t">
+<span id="_CPPv3N7HBridge5writeE7int16_t"></span><span id="_CPPv2N7HBridge5writeE7int16_t"></span><span id="HBridge::write__int16_t"></span><span class="target" id="classHBridge_1a340b53c10bf2eaa32579cb1902d9ed66"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">int16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N7HBridge5writeE7int16_t" title="Link to this definition"></a><br /></dt>
+<dd><p>Writes a speed value to the motor. </p>
+<p>The value controls both the speed and direction of the motor. Positive values set forward direction, while negative values set reverse direction. The value is constrained between -255 and 255.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> – The speed value to write, where 0 is stopped, 255 is full forward, and -255 is full reverse. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="conf">
+<span class="target" id="namespaceconf"></span><em class="property"><span class="pre">module</span> </em><span class="sig-name descname"><span class="pre">conf</span></span><a class="headerlink" href="#conf" title="Link to this definition"></a></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-variables">Variables</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="conf.project">
+<span class="target" id="conf_8py_1a2803387c30920e3e74f46eb541db430d"></span><span class="sig-name descname"><span class="pre">project</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;DriveMaster&quot;</span></em><a class="headerlink" href="#conf.project" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="conf.copyright">
+<span class="target" id="conf_8py_1aa11e0a8e9c47ccc775796bd64c295d2c"></span><span class="sig-name descname"><span class="pre">copyright</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;2025,</span> <span class="pre">Witty-Wizard&quot;</span></em><a class="headerlink" href="#conf.copyright" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="conf.author">
+<span class="target" id="conf_8py_1a0b68e66074bc74dbb7460951f810b4c8"></span><span class="sig-name descname"><span class="pre">author</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;Witty-Wizard&quot;</span></em><a class="headerlink" href="#conf.author" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="conf.release">
+<span class="target" id="conf_8py_1aca7e23e5f354ec5d8e18d6b5769908c9"></span><span class="sig-name descname"><span class="pre">release</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;0.0.3&quot;</span></em><a class="headerlink" href="#conf.release" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="conf.extensions">
+<span class="target" id="conf_8py_1ae475e080536acb271a0a0efe56c3ba42"></span><span class="sig-name descname"><span class="pre">extensions</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&quot;sphinx.ext.autodoc&quot;,</span> <span class="pre">&quot;sphinx.ext.viewcode&quot;,</span> <span class="pre">&quot;breathe&quot;,</span> <span class="pre">&quot;sphinx_copybutton&quot;]</span></em><a class="headerlink" href="#conf.extensions" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="conf.templates_path">
+<span class="target" id="conf_8py_1ae850ae634911b713e036b43894fdd525"></span><span class="sig-name descname"><span class="pre">templates_path</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&quot;_templates&quot;]</span></em><a class="headerlink" href="#conf.templates_path" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="conf.exclude_patterns">
+<span class="target" id="conf_8py_1a7ad48fb6f3e9b129c02346ea0d3527c1"></span><span class="sig-name descname"><span class="pre">exclude_patterns</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#conf.exclude_patterns" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="conf.html_theme">
+<span class="target" id="conf_8py_1a012ba9863b958ed7baa933116f2a05b6"></span><span class="sig-name descname"><span class="pre">html_theme</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;sphinx_rtd_theme&quot;</span></em><a class="headerlink" href="#conf.html_theme" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="conf.html_static_path">
+<span class="target" id="conf_8py_1af4fb5d8851ccaade135c2668dd3ced41"></span><span class="sig-name descname"><span class="pre">html_static_path</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&quot;_static&quot;]</span></em><a class="headerlink" href="#conf.html_static_path" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="conf.breathe_projects">
+<span class="target" id="conf_8py_1ad7fcd78de73b7505cc99717d4abf2ac1"></span><span class="sig-name descname"><span class="pre">breathe_projects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{&quot;DriveMaster&quot;:</span> <span class="pre">&quot;../xml&quot;}</span></em><a class="headerlink" href="#conf.breathe_projects" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="conf.breathe_default_project">
+<span class="target" id="conf_8py_1a15ff89fd36856d4530d4ed2083e6dfc7"></span><span class="sig-name descname"><span class="pre">breathe_default_project</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&quot;DriveMaster&quot;</span></em><a class="headerlink" href="#conf.breathe_default_project" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="conf.html_theme_options">
+<span class="target" id="conf_8py_1a920ff115ba22562a3dab4b3f4c9bd634"></span><span class="sig-name descname"><span class="pre">html_theme_options</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{&quot;style_external_links&quot;:</span> <span class="pre">True,</span>&#160; <span class="pre">#</span> <span class="pre">Adds</span> <span class="pre">an</span> <span class="pre">external</span> <span class="pre">link</span> <span class="pre">icon&quot;navigation_depth&quot;:</span> <span class="pre">4,&quot;prev_next_buttons_location&quot;:</span> <span class="pre">&quot;bottom&quot;,&quot;collapse_navigation&quot;:</span> <span class="pre">False,&quot;sticky_navigation&quot;:</span> <span class="pre">True,}</span></em><a class="headerlink" href="#conf.html_theme_options" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="conf.html_context">
+<span class="target" id="conf_8py_1a15082c61d7a81f50d2e7f5b151be6d35"></span><span class="sig-name descname"><span class="pre">html_context</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{&quot;display_github&quot;:</span> <span class="pre">True,&quot;github_user&quot;:</span> <span class="pre">&quot;Robotics-PEC&quot;,&quot;github_repo&quot;:</span> <span class="pre">&quot;Getting-Started-with-ROS&quot;,&quot;github_version&quot;:</span> <span class="pre">&quot;main&quot;,&quot;conf_py_path&quot;:</span> <span class="pre">&quot;/Docs/source/&quot;,</span>&#160; <span class="pre">#</span> <span class="pre">Adjust</span> <span class="pre">based</span> <span class="pre">on</span> <span class="pre">repo</span> <span class="pre">structure}</span></em><a class="headerlink" href="#conf.html_context" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object py">
+<span class="target" id="conf_8py"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">conf.py</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="basic__dshot_8ino"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">basic_dshot.ino</span></span></dt>
+<dd><div class="docutils container">
+<em>#include &lt;<a class="reference internal" href="#DriveMaster_8h"><span class="std std-ref">DriveMaster.h</span></a>&gt;</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.MOTOR_PIN">
+<span class="target" id="basic__dshot_8ino_1a8e1ee46448a9d6fd89208aa48e0b1e58"></span><span class="sig-name descname"><span class="n"><span class="pre">MOTOR_PIN</span></span></span><a class="headerlink" href="#c.MOTOR_PIN" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv45setupv">
+<span id="_CPPv35setupv"></span><span id="_CPPv25setupv"></span><span id="setup"></span><span class="target" id="basic__dshot_8ino_1a4fc01d736fe50cf5b977f755b675f11d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setup</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv45setupv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv44loopv">
+<span id="_CPPv34loopv"></span><span id="_CPPv24loopv"></span><span id="loop"></span><span class="target" id="basic__dshot_8ino_1afe461d27b9c48d5921c00d521181f12f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">loop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv44loopv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-variables">Variables</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv45motor">
+<span id="_CPPv35motor"></span><span id="_CPPv25motor"></span><span id="motor__DriveMasterP"></span><span class="target" id="basic__dshot_8ino_1aa692fc3fdc93c63485b84680be7b008e"></span><a class="reference internal" href="#_CPPv411DriveMaster" title="DriveMaster"><span class="n"><span class="pre">DriveMaster</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">motor</span></span></span><a class="headerlink" href="#_CPPv45motor" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="DriveMaster_8cpp"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">DriveMaster.cpp</span></span></dt>
+<dd><div class="docutils container">
+<em>#include “<a class="reference internal" href="#DriveMaster_8h"><span class="std std-ref">DriveMaster.h</span></a>”</em></div>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="DriveMaster_8h"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">DriveMaster.h</span></span></dt>
+<dd><div class="docutils container">
+<em>#include &lt;Arduino.h&gt;</em></div>
+<div class="docutils container">
+<em>#include “<a class="reference internal" href="#dshot_8h"><span class="std std-ref">dshot.h</span></a>”</em></div>
+<div class="docutils container">
+<em>#include “<a class="reference internal" href="#HBridge_8h"><span class="std std-ref">HBridge.h</span></a>”</em></div>
+<p>Header file for the <a class="reference internal" href="#classDriveMaster"><span class="std std-ref">DriveMaster</span></a> class. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.DRIVEMASTER_H">
+<span class="target" id="DriveMaster_8h_1a331261f547e058c0cb56f2533f9e6dfa"></span><span class="sig-name descname"><span class="n"><span class="pre">DRIVEMASTER_H</span></span></span><a class="headerlink" href="#c.DRIVEMASTER_H" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="dshot_8cpp"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">dshot.cpp</span></span></dt>
+<dd><div class="docutils container">
+<em>#include “<a class="reference internal" href="#dshot_8h"><span class="std std-ref">dshot.h</span></a>”</em></div>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="dshot_8h"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">dshot.h</span></span></dt>
+<dd><div class="docutils container">
+<em>#include “<a class="reference internal" href="#DriveMaster_8h"><span class="std std-ref">DriveMaster.h</span></a>”</em></div>
+<p>Header file for the dshot class. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.DSHOT_H">
+<span class="target" id="dshot_8h_1a960ff4066a4b63bda68277b6c9bbd578"></span><span class="sig-name descname"><span class="n"><span class="pre">DSHOT_H</span></span></span><a class="headerlink" href="#c.DSHOT_H" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="HBridge_8cpp"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">HBridge.cpp</span></span></dt>
+<dd><div class="docutils container">
+<em>#include &lt;<a class="reference internal" href="#HBridge_8h"><span class="std std-ref">HBridge.h</span></a>&gt;</em></div>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="HBridge_8h"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">HBridge.h</span></span></dt>
+<dd><div class="docutils container">
+<em>#include “<a class="reference internal" href="#DriveMaster_8h"><span class="std std-ref">DriveMaster.h</span></a>”</em></div>
+<p>Header file for the <a class="reference internal" href="#classHBridge"><span class="std std-ref">HBridge</span></a> class, which controls an H-Bridge motor driver. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.HBRIDGE_H">
+<span class="target" id="HBridge_8h_1a5ec408fd18819e0287cfff87d8ce064c"></span><span class="sig-name descname"><span class="n"><span class="pre">HBRIDGE_H</span></span></span><a class="headerlink" href="#c.HBRIDGE_H" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="dir_8ef5030b3ccc9ad18ec5bbd7ca69a8c4"></span><em><span class="pre">dir</span></em> <span class="sig-name descname"><span class="pre">examples/basic_dshot</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="dir_5baf679cf4943df8904dce5d41d4d3dc"></span><em><span class="pre">dir</span></em> <span class="sig-name descname"><span class="pre">Docs</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="dir_d28a4824dc47e487b107a5db32ef43c4"></span><em><span class="pre">dir</span></em> <span class="sig-name descname"><span class="pre">examples</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="dir_ad6f24764c0b19c50834c5ab8d174026"></span><em><span class="pre">dir</span></em> <span class="sig-name descname"><span class="pre">Docs/source</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="dir_68267d1309a1af8e8297ef4c3efbcdba"></span><em><span class="pre">dir</span></em> <span class="sig-name descname"><span class="pre">src</span></span></dt>
+<dd></dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="example.html" class="btn btn-neutral float-left" title="Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Witty-Wizard.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DriveMaster &mdash; DriveMaster 0.0.3 documentation</title>
+  <title>Tutorial &mdash; DriveMaster 0.0.3 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -22,7 +22,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Installation" href="installation.html" /> 
+    <link rel="next" title="Examples" href="example.html" />
+    <link rel="prev" title="Installation" href="installation.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -33,7 +34,7 @@
 
           
           
-          <a href="#" class="icon icon-home">
+          <a href="index.html" class="icon icon-home">
             DriveMaster
           </a>
 <div role="search">
@@ -45,14 +46,14 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="installation.html#arduino-installation">Arduino Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="installation.html#platformio-installation">PlatformIO Installation</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#using-drivemaster-library-for-motor-control">Using DriveMaster Library for Motor Control</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#using-drivemaster-library-for-motor-control">Using DriveMaster Library for Motor Control</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="example.html">Examples</a><ul>
@@ -112,17 +113,17 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">DriveMaster</a>
+          <a href="index.html">DriveMaster</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content style-external-links">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">DriveMaster</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Tutorial</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/Robotics-PEC/Getting-Started-with-ROS/blob/main/Docs/source/index.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/Robotics-PEC/Getting-Started-with-ROS/blob/main/Docs/source/tutorial.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -130,85 +131,45 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="toctree-wrapper compound">
+  <section id="tutorial">
+<span id="id1"></span><h1>Tutorial<a class="headerlink" href="#tutorial" title="Link to this heading"></a></h1>
+<section id="using-drivemaster-library-for-motor-control">
+<h2>Using DriveMaster Library for Motor Control<a class="headerlink" href="#using-drivemaster-library-for-motor-control" title="Link to this heading"></a></h2>
+<p>To control motors in your Arduino project using the DriveMaster library, follow these steps:</p>
+<ol class="arabic simple">
+<li><p><strong>Include Necessary Libraries</strong></p></li>
+</ol>
+<p>Include the required library at the beginning of your sketch:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;DriveMaster.h&gt;</span>
+</pre></div>
 </div>
-<section id="drivemaster">
-<h1>DriveMaster<a class="headerlink" href="#drivemaster" title="Link to this heading"></a></h1>
-<p id="mainpage">DriveMaster is a common library designed to simplify the implementation of RC protocol decoding in Arduino projects. It provides a modular and extensible architecture that allows for easy integration of various RC protocols.</p>
-<section id="supported-protocol">
-<h2>Supported Protocol<a class="headerlink" href="#supported-protocol" title="Link to this heading"></a></h2>
-<ul class="simple">
-<li><p><a class="reference internal" href="#dshot">DShot</a></p></li>
-</ul>
-</section>
-<section id="dshot">
-<h2>DShot<a class="headerlink" href="#dshot" title="Link to this heading"></a></h2>
-<section id="frame-structure">
-<h3>Frame Structure<a class="headerlink" href="#frame-structure" title="Link to this heading"></a></h3>
-<p>The DShot frame consists of 16 bits and follows a specific structure:</p>
-<ul class="simple">
-<li><p><strong>Throttle</strong>: 11 bits representing throttle values ranging from 48 to 2047.</p></li>
-<li><p><strong>Telemetry Request</strong>: 1 bit indicating whether telemetry data is requested.</p></li>
-<li><p><strong>CRC</strong>: 4 bits for error checking using a cyclic redundancy check.</p></li>
-</ul>
-</section>
-<section id="dshot-versions-and-bitrates">
-<h3>DShot Versions and Bitrates<a class="headerlink" href="#dshot-versions-and-bitrates" title="Link to this heading"></a></h3>
-<p>Different versions of DShot support varying bitrates and durations for high and low signal times:</p>
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>DShot Version</p></th>
-<th class="head"><p>Bitrate (bps)</p></th>
-<th class="head"><p>T1H (µs)</p></th>
-<th class="head"><p>T0H (µs)</p></th>
-<th class="head"><p>Bit Length (µs)</p></th>
-<th class="head"><p>Frame Length (µs)</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>DShot150</p></td>
-<td><p>150,000</p></td>
-<td><p>5.00</p></td>
-<td><p>2.50</p></td>
-<td><p>6.67</p></td>
-<td><p>106.72</p></td>
-</tr>
-<tr class="row-odd"><td><p>DShot300</p></td>
-<td><p>300,000</p></td>
-<td><p>2.50</p></td>
-<td><p>1.25</p></td>
-<td><p>3.33</p></td>
-<td><p>53.28</p></td>
-</tr>
-<tr class="row-even"><td><p>DShot600</p></td>
-<td><p>600,000</p></td>
-<td><p>1.25</p></td>
-<td><p>0.625</p></td>
-<td><p>1.67</p></td>
-<td><p>26.72</p></td>
-</tr>
-<tr class="row-odd"><td><p>DShot1200</p></td>
-<td><p>1,200,000</p></td>
-<td><p>0.625</p></td>
-<td><p>0.313</p></td>
-<td><p>0.83</p></td>
-<td><p>13.28</p></td>
-</tr>
-</tbody>
-</table>
-</section>
-</section>
-<section id="getting-started">
-<h2>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading"></a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="installation.html">Installation</a></p></li>
-<li><p><a class="reference external" href="tutorial.html">Tutorial</a></p></li>
-<li><p><a class="reference external" href="example.html">Examples</a></p></li>
-</ul>
-</section>
-<section id="license">
-<h2>License<a class="headerlink" href="#license" title="Link to this heading"></a></h2>
-<p>This library is distributed under the GNU <a class="reference external" href="https://www.gnu.org/licenses/gpl-3.0.html">General Public License version 3.0</a>.</p>
+<ol class="arabic simple" start="2">
+<li><p><strong>Instantiate DriveMaster Object</strong></p></li>
+</ol>
+<p>Create an instance of the DriveMaster class, specifying the pin connected to the motor:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">DriveMaster</span><span class="w"> </span><span class="o">*</span><span class="n">motor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">dshot</span><span class="p">(</span><span class="n">motorPin</span><span class="p">);</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p><strong>Initialize Motor Control</strong></p></li>
+</ol>
+<p>Call the <code class="docutils literal notranslate"><span class="pre">begin()</span></code> method to initialize motor control:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">motor</span><span class="o">-&gt;</span><span class="n">begin</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p><strong>Send Commands or Values</strong></p></li>
+</ol>
+<p>You can use the <code class="docutils literal notranslate"><span class="pre">sendCommand()</span></code> or <code class="docutils literal notranslate"><span class="pre">sendValue()</span></code> methods to send specific commands or values to the motor:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Send a specific command to the motor</span>
+<span class="n">motor</span><span class="o">-&gt;</span><span class="n">sendCommand</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+
+<span class="c1">// Send a value directly to the motor</span>
+<span class="n">motor</span><span class="o">-&gt;</span><span class="n">sendValue</span><span class="p">(</span><span class="mi">512</span><span class="p">);</span>
+</pre></div>
+</div>
 </section>
 </section>
 
@@ -216,7 +177,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="example.html" class="btn btn-neutral float-right" title="Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

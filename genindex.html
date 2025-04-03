@@ -3,10 +3,9 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DriveMaster &mdash; DriveMaster 0.0.3 documentation</title>
+  <title>Index &mdash; DriveMaster 0.0.3 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -20,9 +19,8 @@
       <script src="_static/clipboard.min.js?v=a7894cd8"></script>
       <script src="_static/copybutton.js?v=f281be69"></script>
     <script src="_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Installation" href="installation.html" /> 
+    <link rel="index" title="Index" href="#" />
+    <link rel="search" title="Search" href="search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -33,7 +31,7 @@
 
           
           
-          <a href="#" class="icon icon-home">
+          <a href="index.html" class="icon icon-home">
             DriveMaster
           </a>
 <div role="search">
@@ -112,17 +110,17 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">DriveMaster</a>
+          <a href="index.html">DriveMaster</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content style-external-links">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">DriveMaster</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Index</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/Robotics-PEC/Getting-Started-with-ROS/blob/main/Docs/source/index.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/Robotics-PEC/Getting-Started-with-ROS/blob/main/Docs/source/genindex" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -130,94 +128,181 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="toctree-wrapper compound">
+
+<h1 id="index">Index</h1>
+
+<div class="genindex-jumpbox">
+ <a href="#A"><strong>A</strong></a>
+ | <a href="#B"><strong>B</strong></a>
+ | <a href="#C"><strong>C</strong></a>
+ | <a href="#D"><strong>D</strong></a>
+ | <a href="#E"><strong>E</strong></a>
+ | <a href="#H"><strong>H</strong></a>
+ | <a href="#L"><strong>L</strong></a>
+ | <a href="#M"><strong>M</strong></a>
+ | <a href="#P"><strong>P</strong></a>
+ | <a href="#R"><strong>R</strong></a>
+ | <a href="#S"><strong>S</strong></a>
+ | <a href="#T"><strong>T</strong></a>
+ 
 </div>
-<section id="drivemaster">
-<h1>DriveMaster<a class="headerlink" href="#drivemaster" title="Link to this heading"></a></h1>
-<p id="mainpage">DriveMaster is a common library designed to simplify the implementation of RC protocol decoding in Arduino projects. It provides a modular and extensible architecture that allows for easy integration of various RC protocols.</p>
-<section id="supported-protocol">
-<h2>Supported Protocol<a class="headerlink" href="#supported-protocol" title="Link to this heading"></a></h2>
-<ul class="simple">
-<li><p><a class="reference internal" href="#dshot">DShot</a></p></li>
-</ul>
-</section>
-<section id="dshot">
-<h2>DShot<a class="headerlink" href="#dshot" title="Link to this heading"></a></h2>
-<section id="frame-structure">
-<h3>Frame Structure<a class="headerlink" href="#frame-structure" title="Link to this heading"></a></h3>
-<p>The DShot frame consists of 16 bits and follows a specific structure:</p>
-<ul class="simple">
-<li><p><strong>Throttle</strong>: 11 bits representing throttle values ranging from 48 to 2047.</p></li>
-<li><p><strong>Telemetry Request</strong>: 1 bit indicating whether telemetry data is requested.</p></li>
-<li><p><strong>CRC</strong>: 4 bits for error checking using a cyclic redundancy check.</p></li>
-</ul>
-</section>
-<section id="dshot-versions-and-bitrates">
-<h3>DShot Versions and Bitrates<a class="headerlink" href="#dshot-versions-and-bitrates" title="Link to this heading"></a></h3>
-<p>Different versions of DShot support varying bitrates and durations for high and low signal times:</p>
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>DShot Version</p></th>
-<th class="head"><p>Bitrate (bps)</p></th>
-<th class="head"><p>T1H (µs)</p></th>
-<th class="head"><p>T0H (µs)</p></th>
-<th class="head"><p>Bit Length (µs)</p></th>
-<th class="head"><p>Frame Length (µs)</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>DShot150</p></td>
-<td><p>150,000</p></td>
-<td><p>5.00</p></td>
-<td><p>2.50</p></td>
-<td><p>6.67</p></td>
-<td><p>106.72</p></td>
-</tr>
-<tr class="row-odd"><td><p>DShot300</p></td>
-<td><p>300,000</p></td>
-<td><p>2.50</p></td>
-<td><p>1.25</p></td>
-<td><p>3.33</p></td>
-<td><p>53.28</p></td>
-</tr>
-<tr class="row-even"><td><p>DShot600</p></td>
-<td><p>600,000</p></td>
-<td><p>1.25</p></td>
-<td><p>0.625</p></td>
-<td><p>1.67</p></td>
-<td><p>26.72</p></td>
-</tr>
-<tr class="row-odd"><td><p>DShot1200</p></td>
-<td><p>1,200,000</p></td>
-<td><p>0.625</p></td>
-<td><p>0.313</p></td>
-<td><p>0.83</p></td>
-<td><p>13.28</p></td>
-</tr>
-</tbody>
-</table>
-</section>
-</section>
-<section id="getting-started">
-<h2>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading"></a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="installation.html">Installation</a></p></li>
-<li><p><a class="reference external" href="tutorial.html">Tutorial</a></p></li>
-<li><p><a class="reference external" href="example.html">Examples</a></p></li>
-</ul>
-</section>
-<section id="license">
-<h2>License<a class="headerlink" href="#license" title="Link to this heading"></a></h2>
-<p>This library is distributed under the GNU <a class="reference external" href="https://www.gnu.org/licenses/gpl-3.0.html">General Public License version 3.0</a>.</p>
-</section>
-</section>
+<h2 id="A">A</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocumentation.html#conf.author">author (conf attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="B">B</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocumentation.html#conf.breathe_default_project">breathe_default_project (conf attribute)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocumentation.html#conf.breathe_projects">breathe_projects (conf attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="C">C</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocumentation.html#conf">conf (built-in class)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocumentation.html#conf.copyright">copyright (conf attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="D">D</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocumentation.html#_CPPv411DriveMaster">DriveMaster (C++ class)</a>
+</li>
+      <li><a href="apidocumentation.html#_CPPv4N11DriveMaster8_dir_pinE">DriveMaster::_dir_pin (C++ member)</a>
+</li>
+      <li><a href="apidocumentation.html#_CPPv4N11DriveMaster4_pinE">DriveMaster::_pin (C++ member)</a>
+</li>
+      <li><a href="apidocumentation.html#_CPPv4N11DriveMaster5beginEv">DriveMaster::begin (C++ function)</a>
+</li>
+      <li><a href="apidocumentation.html#_CPPv4N11DriveMaster11DriveMasterEi">DriveMaster::DriveMaster (C++ function)</a>, <a href="apidocumentation.html#_CPPv4N11DriveMaster11DriveMasterEii">[1]</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocumentation.html#_CPPv4N11DriveMaster11sendCommandE8uint16_t">DriveMaster::sendCommand (C++ function)</a>
+</li>
+      <li><a href="apidocumentation.html#_CPPv4N11DriveMaster9sendValueE8uint16_t">DriveMaster::sendValue (C++ function)</a>
+</li>
+      <li><a href="apidocumentation.html#_CPPv4N11DriveMaster5writeE7int16_t">DriveMaster::write (C++ function)</a>, <a href="apidocumentation.html#_CPPv4N11DriveMaster5writeE8uint16_tb">[1]</a>
+</li>
+      <li><a href="apidocumentation.html#_CPPv4N11DriveMasterD0Ev">DriveMaster::~DriveMaster (C++ function)</a>
+</li>
+      <li><a href="apidocumentation.html#c.DRIVEMASTER_H">DRIVEMASTER_H (C macro)</a>
+</li>
+      <li><a href="apidocumentation.html#c.DSHOT_H">DSHOT_H (C macro)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="E">E</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocumentation.html#conf.exclude_patterns">exclude_patterns (conf attribute)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocumentation.html#conf.extensions">extensions (conf attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="H">H</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocumentation.html#_CPPv47HBridge">HBridge (C++ class)</a>
+</li>
+      <li><a href="apidocumentation.html#_CPPv4N7HBridge5beginEv">HBridge::begin (C++ function)</a>
+</li>
+      <li><a href="apidocumentation.html#_CPPv4N7HBridge7HBridgeEii">HBridge::HBridge (C++ function)</a>
+</li>
+      <li><a href="apidocumentation.html#_CPPv4N7HBridge5writeE7int16_t">HBridge::write (C++ function)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocumentation.html#c.HBRIDGE_H">HBRIDGE_H (C macro)</a>
+</li>
+      <li><a href="apidocumentation.html#conf.html_context">html_context (conf attribute)</a>
+</li>
+      <li><a href="apidocumentation.html#conf.html_static_path">html_static_path (conf attribute)</a>
+</li>
+      <li><a href="apidocumentation.html#conf.html_theme">html_theme (conf attribute)</a>
+</li>
+      <li><a href="apidocumentation.html#conf.html_theme_options">html_theme_options (conf attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="L">L</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocumentation.html#_CPPv44loopv">loop (C++ function)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="M">M</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocumentation.html#_CPPv45motor">motor (C++ member)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocumentation.html#c.MOTOR_PIN">MOTOR_PIN (C macro)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="P">P</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocumentation.html#conf.project">project (conf attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="R">R</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocumentation.html#conf.release">release (conf attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="S">S</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocumentation.html#_CPPv45setupv">setup (C++ function)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="T">T</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidocumentation.html#conf.templates_path">templates_path (conf attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
 
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

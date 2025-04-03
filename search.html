@@ -3,15 +3,15 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DriveMaster &mdash; DriveMaster 0.0.3 documentation</title>
+  <title>Search &mdash; DriveMaster 0.0.3 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
 
   
+    
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="_static/documentation_options.js?v=47de8214"></script>
@@ -20,9 +20,10 @@
       <script src="_static/clipboard.min.js?v=a7894cd8"></script>
       <script src="_static/copybutton.js?v=f281be69"></script>
     <script src="_static/js/theme.js"></script>
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Installation" href="installation.html" /> 
+    <link rel="search" title="Search" href="#" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -33,11 +34,11 @@
 
           
           
-          <a href="#" class="icon icon-home">
+          <a href="index.html" class="icon icon-home">
             DriveMaster
           </a>
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+  <form id="rtd-search-form" class="wy-form" action="#" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -112,17 +113,16 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">DriveMaster</a>
+          <a href="index.html">DriveMaster</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content style-external-links">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">DriveMaster</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Search</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/Robotics-PEC/Getting-Started-with-ROS/blob/main/Docs/source/index.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -130,94 +130,22 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="toctree-wrapper compound">
-</div>
-<section id="drivemaster">
-<h1>DriveMaster<a class="headerlink" href="#drivemaster" title="Link to this heading"></a></h1>
-<p id="mainpage">DriveMaster is a common library designed to simplify the implementation of RC protocol decoding in Arduino projects. It provides a modular and extensible architecture that allows for easy integration of various RC protocols.</p>
-<section id="supported-protocol">
-<h2>Supported Protocol<a class="headerlink" href="#supported-protocol" title="Link to this heading"></a></h2>
-<ul class="simple">
-<li><p><a class="reference internal" href="#dshot">DShot</a></p></li>
-</ul>
-</section>
-<section id="dshot">
-<h2>DShot<a class="headerlink" href="#dshot" title="Link to this heading"></a></h2>
-<section id="frame-structure">
-<h3>Frame Structure<a class="headerlink" href="#frame-structure" title="Link to this heading"></a></h3>
-<p>The DShot frame consists of 16 bits and follows a specific structure:</p>
-<ul class="simple">
-<li><p><strong>Throttle</strong>: 11 bits representing throttle values ranging from 48 to 2047.</p></li>
-<li><p><strong>Telemetry Request</strong>: 1 bit indicating whether telemetry data is requested.</p></li>
-<li><p><strong>CRC</strong>: 4 bits for error checking using a cyclic redundancy check.</p></li>
-</ul>
-</section>
-<section id="dshot-versions-and-bitrates">
-<h3>DShot Versions and Bitrates<a class="headerlink" href="#dshot-versions-and-bitrates" title="Link to this heading"></a></h3>
-<p>Different versions of DShot support varying bitrates and durations for high and low signal times:</p>
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>DShot Version</p></th>
-<th class="head"><p>Bitrate (bps)</p></th>
-<th class="head"><p>T1H (µs)</p></th>
-<th class="head"><p>T0H (µs)</p></th>
-<th class="head"><p>Bit Length (µs)</p></th>
-<th class="head"><p>Frame Length (µs)</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>DShot150</p></td>
-<td><p>150,000</p></td>
-<td><p>5.00</p></td>
-<td><p>2.50</p></td>
-<td><p>6.67</p></td>
-<td><p>106.72</p></td>
-</tr>
-<tr class="row-odd"><td><p>DShot300</p></td>
-<td><p>300,000</p></td>
-<td><p>2.50</p></td>
-<td><p>1.25</p></td>
-<td><p>3.33</p></td>
-<td><p>53.28</p></td>
-</tr>
-<tr class="row-even"><td><p>DShot600</p></td>
-<td><p>600,000</p></td>
-<td><p>1.25</p></td>
-<td><p>0.625</p></td>
-<td><p>1.67</p></td>
-<td><p>26.72</p></td>
-</tr>
-<tr class="row-odd"><td><p>DShot1200</p></td>
-<td><p>1,200,000</p></td>
-<td><p>0.625</p></td>
-<td><p>0.313</p></td>
-<td><p>0.83</p></td>
-<td><p>13.28</p></td>
-</tr>
-</tbody>
-</table>
-</section>
-</section>
-<section id="getting-started">
-<h2>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading"></a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="installation.html">Installation</a></p></li>
-<li><p><a class="reference external" href="tutorial.html">Tutorial</a></p></li>
-<li><p><a class="reference external" href="example.html">Examples</a></p></li>
-</ul>
-</section>
-<section id="license">
-<h2>License<a class="headerlink" href="#license" title="Link to this heading"></a></h2>
-<p>This library is distributed under the GNU <a class="reference external" href="https://www.gnu.org/licenses/gpl-3.0.html">General Public License version 3.0</a>.</p>
-</section>
-</section>
+  <noscript>
+  <div id="fallback" class="admonition warning">
+    <p class="last">
+      Please activate JavaScript to enable the search functionality.
+    </p>
+  </div>
+  </noscript>
 
+  
+  <div id="search-results">
+  
+  </div>
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 
@@ -239,7 +167,14 @@
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+  <script>
+    jQuery(function() { Search.loadIndex("searchindex.js"); });
+  </script>
+  
+  <script id="searchindexloader"></script>
+   
+
 
 </body>
 </html>
