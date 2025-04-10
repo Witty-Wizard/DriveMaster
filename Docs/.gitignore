@@ -9,6 +9,7 @@ venv/
 .venv/
 
 # Sphinx build directory
+_build/
 build/
 docs/_build/
 
