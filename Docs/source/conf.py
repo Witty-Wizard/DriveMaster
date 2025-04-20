@@ -47,8 +47,8 @@ html_theme_options = {
 
 html_context = {
     "display_github": True,
-    "github_user": "Robotics-PEC",
-    "github_repo": "Getting-Started-with-ROS",
+    "github_user": "Witty-Wizard",
+    "github_repo": "DriveMaster",
     "github_version": "main",
     "conf_py_path": "/Docs/source/",  # Adjust based on repo structure
 }
