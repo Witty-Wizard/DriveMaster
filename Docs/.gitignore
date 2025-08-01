@@ -1,0 +1,18 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env/
+.venv/
+
+# Sphinx build directory
+_build/
+build/
+docs/_build/
+
+# Doxygen build files
+xml/
+html/
